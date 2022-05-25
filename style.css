@@ -1,5 +1,64 @@
 /* My Styles */
 
 body {
-    background-color: yellowgreen;
-}
+    display: grid;
+    font-size: 3em;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    background: linear-gradient(
+      90deg,
+      rgba(255, 218, 248, 1) 0%,
+      rgba(182, 117, 245, 1) 37%,
+      rgba(77, 212, 240, 1) 100%
+    );
+    color: white;
+  }
+  
+  section {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 8;
+    font-family: 'Clash Display', sans-serif;
+  }
+  
+  #circle {
+    position: relative;
+    z-index: -2;
+    animation: rotateText 50s linear infinite;
+  }
+  
+  @keyframes rotateText {
+      from {
+          transform: rotate(360deg);
+      }
+      to {
+          transform: rotate(0deg);
+      }
+  }
+  
+  button {
+    font-size: 0.5em;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    z-index: 5;
+    grid-row-start: 4;
+    grid-row-end: 5;
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.6),
+      rgba(255, 255, 255, 0.2)
+    );
+    box-shadow: 5px 5px 5px rgba(136, 136, 136, 0.34);
+    border: solid 1px rgba(255, 255, 255, 0.34);
+    border-radius: 20px;
+    font-family: 'Clash Display', sans-serif;
+    font-weight: 600;
+    letter-spacing: .1rem;
+  }
+  
+  span {
+    display: block;
+  }
+
+  
